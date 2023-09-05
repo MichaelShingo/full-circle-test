@@ -71,4 +71,6 @@ def disconnect():
     print('Client disconnected',  request.sid)
 
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app, allow_unsafe_werkzeug=True)
+else:
+    socketio.run(app, allow_unsafe_werkzeug=True)
