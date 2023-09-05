@@ -14,7 +14,7 @@ thread_lock = Lock()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'donsky!'
-socketio = SocketIO(app, cors_allowed_origins='*')
+socketio = SocketIO(app, async_mode='eventlet') # cors_allowed_origins='*'
 
 """
 Get current date time
