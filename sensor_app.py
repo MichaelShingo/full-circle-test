@@ -14,7 +14,7 @@ thread_lock = Lock()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'donsky!'
-socketio = SocketIO(app, async_mode='eventlet') # cors_allowed_origins='*'
+socketio = SocketIO(app, cors_allowed_origins='*') #  async_mode='eventlet'
 
 """
 Get current date time
@@ -71,4 +71,4 @@ def disconnect():
     print('Client disconnected',  request.sid)
 
 if __name__ == '__main__':
-    socketio.run(app, allow_unsafe_werkzeug=True)
+    socketio.run(app) # allow_unsafe_werkzeug=True
