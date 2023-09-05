@@ -1,2 +1,2 @@
 runtime: python311
-entrypoint: gunicorn -b :$PORT sensor_app:app
+entrypoint: gunicorn --worker-class eventlet -w 1 sensor_app:app
