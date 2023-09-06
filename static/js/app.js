@@ -9,7 +9,19 @@ $(document).ready(function () {
     },
     options: {
       borderWidth: 3,
-      borderColor: ['rgba(255, 99, 132, 1)'],
+      borderColor: ['rgba(254,81,81,255)'],
+      scales: {
+        xAxes: {
+          gridLines: {
+            color: '#FFFFFF',
+          },
+        },
+        yAxes: {
+          gridLines: {
+            color: '#FFFFFF',
+          },
+        },
+      },
     },
   });
 
